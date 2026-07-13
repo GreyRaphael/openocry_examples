@@ -57,7 +57,7 @@ def main():
     p = argparse.ArgumentParser(description="Image/PDF → Markdown via OpenOCR (Unified)")
     p.add_argument("input", help="Input file (Image or PDF)")
     p.add_argument("-o", "--output", help="Output directory (defaults to ocr_output_{filename})")
-    p.add_argument("--max-parallel-blocks", type=int, default=8, help="Max parallel VLM threads (default: 8)")
+    p.add_argument("--max-parallel-blocks", type=int, default=4, help="Max parallel VLM threads (default: 8)")
     args = p.parse_args()
 
     # 自动获取输入文件的文件名
