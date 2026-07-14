@@ -76,10 +76,10 @@ def main():
     doc = OpenOCR(
         task="doc",
         max_parallel_blocks=args.max_parallel_blocks,
-        unirec_encoder_path="quantized_models/unirec_encoder_uint8.onnx",
-        unirec_decoder_path="quantized_models/unirec_decoder_uint8.onnx",
-        tokenizer_mapping_path="quantized_models/unirec_tokenizer_mapping.json",
-        layout_model_path="quantized_models/PP-DoclayoutV2_uint8.onnx",
+        unirec_encoder_path="models/unirec_encoder_uint8.onnx",
+        unirec_decoder_path="models/unirec_decoder_uint8.onnx",
+        tokenizer_mapping_path="models/unirec_tokenizer_mapping.json",
+        layout_model_path="models/PP-DoclayoutV2_uint8.onnx",
     )
     print("Engine ready.\n")
 
