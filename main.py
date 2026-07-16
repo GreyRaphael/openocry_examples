@@ -43,7 +43,7 @@ def process_file(doc, in_path: str, output_dir: str):
     print(f"[→] Processing: {input_path}")
     try:
         # v0.1.12 原生支持流式 PDF 解析与自适应零补全页码命名
-        result = doc(image_path=str(input_path), max_length=8192)
+        result = doc(image_path=str(input_path), max_length=3072)
 
         # 保存 Markdown
         doc.save_to_markdown(result, str(out))
@@ -76,10 +76,10 @@ def main():
     doc = OpenOCR(
         task="doc",
         max_parallel_blocks=args.max_parallel_blocks,
-        unirec_encoder_path="models/unirec_encoder_uint8.onnx",
-        unirec_decoder_path="models/unirec_decoder_uint8.onnx",
+        unirec_encoder_path="models/unirec_encoder.onnx",
+        unirec_decoder_path="models/unirec_decoder.onnx",
         tokenizer_mapping_path="models/unirec_tokenizer_mapping.json",
-        layout_model_path="models/PP-DoclayoutV2_uint8.onnx",
+        layout_model_path="models/PP-DoclayoutV2.onnx",
     )
     print("Engine ready.\n")
 
