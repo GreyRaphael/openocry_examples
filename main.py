@@ -43,7 +43,7 @@ def process_file(doc, in_path: str, output_dir: str):
     print(f"[→] Processing: {input_path}")
     try:
         # v0.1.12 原生支持流式 PDF 解析与自适应零补全页码命名
-        result = doc(image_path=str(input_path))
+        result = doc(image_path=str(input_path), max_length=8192)
 
         # 保存 Markdown
         doc.save_to_markdown(result, str(out))
