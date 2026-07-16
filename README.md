@@ -20,7 +20,7 @@ Image/PDF → Markdown 文档 OCR 转换工具，基于 [OpenOCR](https://github
 ```bash
 # 克隆仓库
 git clone <repo-url>
-cd ocr
+cd openocr2md
 
 # 创建虚拟环境并安装依赖
 python -m venv .venv
@@ -45,13 +45,13 @@ pip install openocry>=0.1.19
 
 ```bash
 # 基本用法：处理图片或 PDF，输出到 ocr_out_{filename}/ 目录
-python openocr2md.py document.pdf
+python main.py document.pdf
 
 # 指定输出目录
-python openocr2md.py scan.png -o /path/to/output
+python main.py scan.png -o /path/to/output
 
 # 调整 VLM 并行线程数（默认 4）
-python openocr2md.py document.pdf --max-parallel-blocks 8
+python main.py document.pdf --max-parallel-blocks 8
 ```
 
 ### 参数说明
@@ -66,16 +66,17 @@ python openocr2md.py document.pdf --max-parallel-blocks 8
 
 ```
 ocr_out_{filename}/
-├── doc.md          # 转换后的 Markdown 文档
 ├── openocr.log     # 处理日志
-└── ...             # 其他中间/辅助文件
+└── page1/          # 各页结果输出目录（按 page1, page2... 命名）
+    ├── page1.md    # 该页转换后的 Markdown 文档
+    └── imgs/       # 从该页提取的图像/图表等（可选）
 ```
 
 ## 项目结构
 
 ```
-ocr/
-├── openocr2md.py       # 主脚本：图片/PDF → Markdown
+openocr2md/
+├── main.py             # 主脚本：图片/PDF → Markdown
 ├── pyproject.toml      # 项目配置与依赖
 ├── models/             # ONNX 模型文件（需自行下载）
 ├── input/              # 输入文件目录（git-ignored）
