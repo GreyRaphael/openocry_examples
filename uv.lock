@@ -383,11 +383,11 @@ dependencies = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "openocry", specifier = ">=0.1.21" }]
+requires-dist = [{ name = "openocry", specifier = ">=0.1.22" }]
 
 [[package]]
 name = "openocry"
-version = "0.1.21"
+version = "0.1.22"
 source = { registry = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple" }
 dependencies = [
     { name = "huggingface-hub" },
@@ -399,9 +399,9 @@ dependencies = [
     { name = "pydantic" },
     { name = "pymupdf" },
 ]
-sdist = { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/53/dd/f968164232393b9d14d2238b74d7eac12306ef95de193d31fb5ef84e9d37/openocry-0.1.21.tar.gz", hash = "sha256:31215d5d219484720c310710716ca704ed565943c80e34a30681e98a5217f70b", size = 462295, upload-time = "2026-07-16T10:45:51.202Z" }
+sdist = { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/60/b5/1db46edeef1a21efc478b265a6df055cb63967f966425d8ab30342e007cf/openocry-0.1.22.tar.gz", hash = "sha256:38337d2d3e28dcfa302b1146c3e9a056857cf8741e6ba33b276d795f056d0511", size = 462498, upload-time = "2026-07-18T04:15:26.572Z" }
 wheels = [
-    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/6a/b0/66515a48b882623b278d13b70cf6e62cc973896ec0a3897e7eafaa2c98cf/openocry-0.1.21-py3-none-any.whl", hash = "sha256:4d522cbf1e45553777410a718fa002237faf63ea8934a64cd0dbe9e6f2cd5341", size = 714320, upload-time = "2026-07-16T10:45:49.569Z" },
+    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/85/81/fcde69661082a7dbde74fdc5e738fec057480cead5d10bbe04e50ed20783/openocry-0.1.22-py3-none-any.whl", hash = "sha256:32f1284bc49f3867162bf971849628b5b7fc43fc455e6549879e133ae0b73e1d", size = 714482, upload-time = "2026-07-18T04:15:24.874Z" },
 ]
 
 [[package]]

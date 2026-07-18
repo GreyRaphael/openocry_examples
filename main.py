@@ -58,6 +58,7 @@ def main():
     p.add_argument("input", help="Input file (Image or PDF)")
     p.add_argument("-o", "--output", help="Output directory (defaults to ocr_output_{filename})")
     p.add_argument("--max-parallel-blocks", type=int, default=4, help="Max parallel VLM threads (default: 8)")
+    p.add_argument("--keep_footnote", action="store_true", help="Keep footnote in Markdown results")
     args = p.parse_args()
 
     # 自动获取输入文件的文件名
@@ -80,6 +81,7 @@ def main():
         unirec_decoder_path="models/unirec_decoder.onnx",
         tokenizer_mapping_path="models/unirec_tokenizer_mapping.json",
         layout_model_path="models/PP-DoclayoutV2.onnx",
+        keep_footnote=args.keep_footnote,
     )
     print("Engine ready.\n")
 
